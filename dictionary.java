@@ -23,7 +23,7 @@ public class Driver {
         userInput = reader.nextLine();
 
         Statement sqlCommand = connection.createStatement();
-        sqlCommand.executeQuery("SELECT japanese FROM words WHERE english = " userInput);
+        sqlCommand.executeQuery("SELECT japanese FROM words WHERE english = \"" + userInput + "\"");
 
         reader.close();
       }
